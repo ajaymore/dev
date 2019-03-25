@@ -4,9 +4,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .navigationSlider .slidingNav ul li a {
-    color: #616161;
-  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -16,4 +13,12 @@
 }
 
 @media only screen and (min-width: 1500px) {
+}
+@media only screen and (min-width: 1024px) {
+  .navigationSlider .slidingNav ul li a:hover,
+  .navigationSlider .slidingNav ul li.siteNavItemActive a,
+  .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+    color: #ffc107;
+    font-weight: 700;
+  }
 }

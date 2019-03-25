@@ -13,47 +13,37 @@ const users = [
   {
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/uninode-long.png'.
-    image: '/img/uninode-long.png',
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: '/img/docusaurus.svg',
     infoLink: 'https://www.facebook.com',
     pinned: true
   }
 ];
 
 const siteConfig = {
-  title: '', // Title for your website.
-  tagline: 'My programming documentation',
+  title: 'Uninode', // Title for your website.
+  tagline: 'My coding canvas',
   url: 'https://ajaymore.github.io', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  baseUrl: '/dev/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'ajaymore.github.io',
+  projectName: 'dev',
   organizationName: 'ajaymore',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
-  algolia: {
-    apiKey: '9cc4ebe11550c80337e89fe47ec30bb2',
-    indexName: 'ajaymore',
-    algoliaOptions: {} // Optional, if provided by Algolia
-  },
-
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: 'packages/server', label: 'NodeJS' },
-    { doc: 'linux/shell', label: 'Linux' },
-    { doc: 'dev/react', label: 'Env' },
-    { doc: 'dev/react', label: 'Design' },
-    { doc: 'dev/react', label: 'Ai' },
-    { doc: 'dev/react', label: 'Animation' },
-    { doc: 'dev/react', label: 'Code' },
-    // { doc: 'dev/react', label: 'Philosophy' },
-    // { doc: 'dev/react', label: 'IoT' },
-    // { doc: 'dev/react', label: 'Projects' },
+    { doc: 'server/cloud-server', label: 'Server' },
+    { doc: 'web/packages', label: 'Web' },
+    { doc: 'mobile/packages', label: 'Mobile' },
+    { doc: 'iot/raspberry', label: 'IoT' },
+    { doc: 'ml/resources', label: 'ML' },
+    { doc: 'dev/react', label: 'Dev' },
     { search: true }
   ],
 
@@ -61,9 +51,15 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/uninode-long.png',
-  footerIcon: 'img/uninode-long.png',
+  headerIcon: 'img/ajay.png',
+  /* footerIcon: 'img/ajay.png', */
   favicon: 'img/favicon.png',
+
+  algolia: {
+    apiKey: '9cc4ebe11550c80337e89fe47ec30bb2',
+    indexName: 'ajaymore',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },
 
   /* Colors for website */
   colors: {
@@ -94,10 +90,13 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js','https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
-  '/js/code-block-buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    '/dev/js/code-block-buttons.js'
+  ],
 
-  stylesheets: ['/css/code-block-buttons.css'],
+  stylesheets: ['/dev/css/code-block-buttons.css'],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',

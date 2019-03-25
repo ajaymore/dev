@@ -69,7 +69,7 @@ git status
 git diff
 
 # Add all changed files
-git add .
+git add --all
 
 # Add some changes in <file> to the commit
 git add -p <file>

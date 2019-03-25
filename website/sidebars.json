@@ -1,18 +1,14 @@
 {
   "docs": {
     "Categories": [
-      "packages/server",
-      "packages/web",
-      "packages/mobile",
-      "packages/desktop"
+      "server/cloud-server",
+      "server/mongodb",
+      "server/postgres",
+      "server/prisma",
+      "server/docker",
+      "server/security",
+      "server/shell"
     ]
-  },
-  "linux": {
-    "Categories": ["linux/cloud-server", "linux/shell", "linux/docker"],
-    "Databases": ["linux/mysql", "linux/mongodb"],
-    "Tools": ["linux/shaka-packager", "linux/jenkins"],
-    "AWS": ["linux/aws-lambda", "linux/aws-s3"],
-    "Hacking": ["linux/hacking"]
   },
   "dev": {
     "Front End": [
