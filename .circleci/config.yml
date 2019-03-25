@@ -1,7 +1,3 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   deploy-website:
@@ -12,12 +8,12 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Deploying to GitHub Pages
-        command: |
-          git config --global user.email "ajaymore@users.noreply.github.com"
-          git config --global user.name "Ajay"
-          echo "machine github.com login ajaymore password $GITHUB_TOKEN" > ~/.netrc
-          cd website && yarn install && GIT_USER=ajaymore yarn run publish-gh-pages
+          command: |
+            git config --global user.email "ajaymore@users.noreply.github.com"
+            git config --global user.name "Ajay More"
+            echo "machine github.com login ajaymore password $GITHUB_TOKEN" > ~/.netrc
+            cd website && yarn install && GIT_USER=ajaymore yarn run publish-gh-pages
+
 workflows:
   version: 2
   build_and_deploy:
