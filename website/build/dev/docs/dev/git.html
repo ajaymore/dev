@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Git · Test Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;HEAD is a reference to the last commit in the currently checked-out branch.&lt;/strong&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Git · Test Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ajaymore.github.io/dev/"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;HEAD is a reference to the last commit in the currently checked-out branch.&lt;/strong&gt;&lt;/p&gt;
+"/><meta property="og:image" content="https://ajaymore.github.io/dev/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ajaymore.github.io/dev/img/docusaurus.png"/><link rel="shortcut icon" href="/dev/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/dev/css/main.css"/><script src="/dev/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/dev/"><img class="logo" src="/dev/img/docusaurus.svg" alt="Test Site"/><h2 class="headerTitleWithLogo">Test Site</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/dev/docs/packages/server" target="_self">NodeJS</a></li><li class=""><a href="/dev/docs/linux/shell" target="_self">Linux</a></li><li class=""><a href="/dev/docs/dev/react" target="_self">Env</a></li><li class=""><a href="/dev/docs/dev/react" target="_self">Design</a></li><li class=""><a href="/dev/docs/dev/react" target="_self">Ai</a></li><li class=""><a href="/dev/docs/dev/react" target="_self">Animation</a></li><li class=""><a href="/dev/docs/dev/react" target="_self">Code</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Git</h1></header><article><div><span><p><strong>HEAD is a reference to the last commit in the currently checked-out branch.</strong></p>
+<p><em>The command git remote add origin <a href="mailto:git@github.com">git@github.com</a>:peter/first_app.git creates a new remote called origin located at <a href="mailto:git@github.com">git@github.com</a>:peter/first_app.git. Once you do this, in your push commands, you can push to origin instead of typing out the whole URL.</em></p>
+<p>Sets the name, email you want attached to your commit transactions</p>
+<pre><code class="hljs">git<span class="hljs-built_in"> config </span>--global user.name <span class="hljs-string">"[name]"</span>
+git<span class="hljs-built_in"> config </span>--global user.email <span class="hljs-string">"[email address]"</span>
+</code></pre>
+<p>Create repositories</p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># Clone existing repository</span>
+git <span class="hljs-built_in">clone</span> https://xxx
+
+<span class="hljs-comment"># Create local repository</span>
+git init
+
+<span class="hljs-comment"># Add remote origin to local repository</span>
+git remote add origin https://xxx
+
+<span class="hljs-comment"># List all currently configured remotes</span>
+git remote -v
+
+<span class="hljs-comment"># Download changes and merge into HEAD</span>
+git pull &lt;remote&gt; &lt;branch&gt;
+
+<span class="hljs-comment"># Remote git</span>
+rm -rf .git
+</code></pre>
+<p>Create and manage branches</p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># List all existing branches</span>
+git branch -av
+
+<span class="hljs-comment"># Switch HEAD branch</span>
+git checkout &lt;branch&gt;
+
+<span class="hljs-comment"># Creates MyFeature branch off dev.</span>
+git checkout -b myFeature dev
+
+<span class="hljs-comment"># Now merge your changes to dev without a fast-forward</span>
+git checkout dev
+git merge --no-ff myFeature
+
+<span class="hljs-comment"># Create a new branch based on your current HEAD</span>
+git branch &lt;new-branch&gt;
+
+<span class="hljs-comment"># Delete a local branch</span>
+git branch -d &lt;branch&gt;
+
+<span class="hljs-comment"># Delete remote branch</span>
+git branch -d &lt;remote/branch&gt;
+</code></pre>
+<p>Managing and pushing code</p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># Changed files in working directory</span>
+git status
+
+<span class="hljs-comment"># Changes to tracked files</span>
+git diff
+
+<span class="hljs-comment"># Add all changed files</span>
+git add --all
+
+<span class="hljs-comment"># Add some changes in &lt;file&gt; to the commit</span>
+git add -p &lt;file&gt;
+
+<span class="hljs-comment"># Commit all the files added</span>
+git commit -m <span class="hljs-string">"Commit message"</span>
+
+<span class="hljs-comment"># Set default push branch</span>
+git push --<span class="hljs-built_in">set</span>-upstream origin docs
+
+<span class="hljs-comment"># Push the changes</span>
+git push &lt;remote&gt; &lt;branch&gt;
+</code></pre>
+<p>Get info</p>
+<pre><code class="hljs css language-bash">git <span class="hljs-built_in">log</span>
+git <span class="hljs-built_in">log</span> -p &lt;file&gt;
+git blame &lt;file&gt;
+</code></pre>
+<p>Undo</p>
+<pre><code class="hljs css language-bash">git reset --hard HEAD
+git checkout -- yarn.lock
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/dev/" class="nav-home"><img src="/dev/img/docusaurus.svg" alt="Test Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/dev/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/dev/docs/en/doc2.html">Guides (or other categories)</a><a href="/dev/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/dev/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/dev/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/dev/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>
