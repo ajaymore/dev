@@ -9,8 +9,18 @@ sidebar_label: Android
 react-native init rnative
 Open in Android
 Change package name app/build.gradle, MainApplication.java, AndroidManifest.xml, Strings.xml
+fix BuildConfig import in MainApplication.java
 Add Firebase
 Edit code in VSCode
+```
+
+```
+./gradlew clean > Restart Android Studio
+react-native-firebase
+./gradlew clean > Restart Android Studio
+react-native-google-signin
+
+- react-native-gesture-handle, react-native-svg, react-native-vector-icons, @react-native-community/async-storage
 ```
 
 **. Deep Linking
