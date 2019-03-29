@@ -9,9 +9,9 @@ sidebar_label: iOS
 react-native init myapp
 cd myapp/ios
 pod init | update pod file with relevant details
-pod install | Open workspace in xcode, start packager from terminal
-Update app name, bundle identifier in general tab
+pod install | Open workspace in xcode, start packager from terminal | https://facebook.github.io/react-native/docs/integration-with-existing-apps#configuring-cocoapods-dependencies
 Run project from xcode
+Update app name, bundle identifier in general tab
 Edit code in VSCode
 ```
 
@@ -32,7 +32,22 @@ Create firebase project, download GoogleService-Info.plist
 add GoogleService-Info.plist to root of the project
 To add libraries -> Libraries ➜ Add Files to [your project's name]
 Update URL Schemes in Info
+
+
+--- Icons
+--- SplashScreen
+--- Certificates
+--- Notifications
+--- Oauth
+--- Deployment processes
+
+update all the pods
 ```
+https://github.com/react-native-community/react-native-svg#automatically
+https://rnfirebase.io/docs/v5.x.x/installation/ios
+
+
+
 ```
 # react-native-google-signin
 ```
