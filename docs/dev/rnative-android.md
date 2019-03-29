@@ -4,6 +4,9 @@ title: React Native Android
 sidebar_label: Android
 ---
 
+**** IMportatn
+https://stackoverflow.com/questions/45992044/xcode-8-build-works-but-archive-fails-react-native
+
 **1. Development setup | Project creation**
 ```
 react-native init rnative
@@ -104,6 +107,8 @@ keytool -exportcert -list -v -alias mobileapp -keystore ~/keys/mobileapp/key.jks
 
 **7. Building & Testing deployments**
   - https://play.google.com/apps/publish
+  - https://developer.apple.com/account/ios/authkey/
+  - 
 
 **8. Using emulators**
   - 
