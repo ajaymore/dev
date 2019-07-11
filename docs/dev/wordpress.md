@@ -1,4 +1,4 @@
-https://codex.wordpress.org/Administration_Over_SSL
+https://wordpress.org/support/article/administration-over-ssl/
 
 
 1. Create MySQL Database
@@ -21,7 +21,6 @@ docker run --name wp-ajaymore --net reverse-proxy -p 8080:80 \
 docker cp wp-ajaymore:/var/www/html/wp-config.php .
 
 define('FORCE_SSL_ADMIN', true);
-define('FORCE_SSL_ADMIN', true);
 // in some setups HTTP_X_FORWARDED_PROTO might contain 
 // a comma-separated list e.g. http,https
 // so check for https existence
@@ -36,3 +35,11 @@ docker cp .htaccess wp-ajaymore:/var/www/html/.htaccess
 ```
 
 Use the site.
+
+MySQL
+```
+mysql -u root -p
+create database db_name
+mysqldump -u root -p shubhlife > backup.sql
+mysql -u root -p --database shubhlife < backup.sql
+```
