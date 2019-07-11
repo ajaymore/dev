@@ -43,3 +43,7 @@ create database db_name
 mysqldump -u root -p shubhlife > backup.sql
 mysql -u root -p --database shubhlife < backup.sql
 ```
+
+```
+scp -i ~/.ssh/rsa_id -r /home/user/theme ajay@abc.org:/home/ajay/wp-content/
+```
