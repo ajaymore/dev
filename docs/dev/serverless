@@ -1,0 +1,6 @@
+```
+npm install -g serverless
+sls config credentials --provide aws --key fdsfa --secret dsdad
+mkdir my-api
+cd api && sls create --template aws-nodejs
+```
