@@ -141,3 +141,11 @@ express, graphql, reactjs, mongodb -- +++
 react-native
 -- mobile auth -> firebase | any other
 --
+
+```
+docker run -v $PWD:/tmp jrottenberg/ffmpeg:3.4-scratch \
+        -stats \
+        -i /tmp/Shubhlife+training+video_T2_KS_E.mp4 \
+        -vf scale=-1:720 -c:v libx264 -crf 18 -preset veryslow \
+        -c:a copy /tmp/Shubhlife_training_P2_KS_E_720.mp4
+```
